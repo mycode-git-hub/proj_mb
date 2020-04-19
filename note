@@ -1,0 +1,12 @@
+1. mb_project/settings.py
+    - modify TEMPLATES[] to set templates location
+2. posts -- app name
+3. posts/models.py
+    - Post -- create and define a database model/row
+    - text -- define a column in the model/row
+4. posts/views.py
+    - HomePageView -- define HomePageView class, inherited from ListView
+5. mb_project/urls.py
+    - add path('', include('posts.urls')) in urlpatterns[]
+6. posts/urls.py
+    - add path('', HomePageView.as_view(), name='home'), in urlpatterns[]
